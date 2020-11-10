@@ -456,7 +456,7 @@ textarea {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   text-decoration: none;
   color: #FFFFFF;
@@ -594,7 +594,7 @@ textarea {
   height: 42px;
   padding-left: 50px;
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
   background: #F8F8F8;
@@ -652,20 +652,20 @@ textarea {
   background-image: linear-gradient(to top, #EA6D54, #FD5271);
   margin-bottom: 3%;
   font-family: "Lato";
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(8px + 0.5vw);
   font-weight: 900;
 }
 
 .header__position {
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
 }
 
 .header__gamburger {
   position: relative;
-  left: 33%;
+  left: 30%;
   width: 5px;
   height: 5px;
   background: #C1C1C1;
@@ -751,7 +751,7 @@ textarea {
 
 .header .statistic__header {
   font-family: "Lato";
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(8px + 0.5vw);
   font-weight: 700;
   color: #777777;
 }
@@ -763,13 +763,13 @@ textarea {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#EA6D54), to(#FD5271));
   background-image: linear-gradient(to top, #EA6D54, #FD5271);
   font-family: "Lato";
-  font-size: calc(.8vw + 10px);
+  font-size: calc(10px + .8vw);
   font-weight: 900;
 }
 
 .header .statistic__result {
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
 }
@@ -816,7 +816,7 @@ textarea {
   background-image: linear-gradient(to top, #EA6D54, #FD5271);
   margin-bottom: 3%;
   font-family: "Lato";
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(8px + 0.5vw);
   font-weight: 900;
   border: none;
 }
@@ -835,6 +835,43 @@ textarea {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 50%;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main__1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.main__2 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: blue;
+}
+
+.main__3 {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 2;
+  border-radius: 50%;
 }
 
 .sidebar {
@@ -978,14 +1015,14 @@ textarea {
 .aside__name {
   margin-bottom: 3%;
   font-family: "Lato";
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(8px + 0.5vw);
   font-weight: 900;
   color: #777777;
 }
 
 .aside__position {
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
 }
@@ -1026,7 +1063,7 @@ textarea {
   margin-right: 5%;
   text-transform: capitalize;
   font-family: "Lato";
-  font-size: calc(0.5vw + 4px);
+  font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
   background: #F8F8F8;
@@ -1070,7 +1107,7 @@ textarea {
   padding-top: 29px;
   padding-bottom: 29px;
   font-family: "Lato";
-  font-size: calc(0.5vw + 8px);
+  font-size: calc(8px + 0.5vw);
   font-weight: 900;
   color: #777777;
 }

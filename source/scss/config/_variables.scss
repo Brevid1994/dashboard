@@ -4,10 +4,10 @@
     $lato: 'Lato';
 
     // font-size
-$small: calc(0.5vw + 4px);
-$medium: calc(0.5vw + 8px);
-$big: calc(1vw + 5px);
-$huge: calc(.8vw + 10px);
+$small: calc(4px + 0.5vw);
+$medium: calc(8px + 0.5vw );
+$big: calc(5px + 1vw);
+$huge: calc(10px + .8vw);
 
     // font-weight
 $regular: 400;
