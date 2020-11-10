@@ -363,6 +363,20 @@ textarea {
   padding: 0.2em 0;
 }
 
+.baseLayout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 94%;
+  height: 100%;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
