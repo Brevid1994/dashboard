@@ -807,4 +807,17 @@ textarea {
   font-weight: 900;
   border: none;
 }
+
+.sidebar {
+  width: 27%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 /*# sourceMappingURL=main.css.map */
