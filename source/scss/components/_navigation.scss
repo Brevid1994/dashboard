@@ -1,0 +1,79 @@
+.navigation {
+    @include flex (column, flex-start, left, nowrap)
+    @include mobile {
+        display: none;
+    }
+
+    max-height: max;
+    width: 6%;
+    background: $gradient-red;
+
+    &__logo {
+        width: 100%;
+        padding-bottom: 25px;
+        padding-top: 25px;
+        margin-bottom: 52px;
+        text-align: center;
+        background-color: $white;
+        box-shadow: 15px 0 15px 0 $darkwhite;
+    }
+
+    &__list {
+        padding-top: 23px;
+        padding-bottom: 23px;
+    }
+
+    &__list:hover {
+        background: $gradient-gray;
+    }
+
+    &__button {
+        @include flex (column, flex-start, center, nowrap);
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        text-decoration: none;
+        color: $white;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+        }
+
+        // gamburger
+
+    &__gamburger  {
+        position: absolute;
+        display: none;
+        width: 50px;
+        height: 2px;
+        background: rgba(19, 199, 115, 1);
+    }
+    
+    &__gamburger::before {
+        position: absolute;
+        top: 7px;
+        content: '';
+        width: 50px;
+        height: 2px;
+        background: rgba(19, 199, 115, 1);
+    }
+    
+    &__gamburger::after {
+        position: absolute;
+        top: -7px;
+        content: '';
+        width: 50px;
+        height: 2px;
+        background: rgba(19, 199, 115, 1);
+    }
+
+    &__gamburger {
+        @include mobile {
+            display: flex;
+            position: fixed;
+            top: 10%;
+            right: 5%;
+        }
+    }
+}
