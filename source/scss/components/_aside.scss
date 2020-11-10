@@ -1,0 +1,110 @@
+.aside {
+    @include flex (column, space-between, center, nowrap)
+
+    &__navigation {
+        width: 100%;
+        background: $gradient-red;
+        @include flex (row, space-between, center, nowrap)
+    }
+
+    &__list {
+        text-align: center;
+        flex: auto; 
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    &__list:hover {
+        background: $gradient-gray;
+    }
+
+    &__chatbar {
+        width: 85%;
+        @include flex (column, space-between, left, nowrap)
+    }
+
+    &__user {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include flex (row, space-between, center, nowrap)
+    }
+
+    &__user::after {
+        position: absolute;
+        content: '';
+        bottom: -5%;
+        width: 100%;
+        height: 1px;
+        background: $litegray;
+    }
+
+    &__avatar {
+        height: 42px;
+        width: 42px;
+    }
+
+    &__person {
+        @include flex (column, space-around, center, nowrap)
+        margin-left: 18px;
+    }
+
+    &__name {
+        margin-bottom: 3%;
+        font-family: $lato;
+        font-size: $medium;
+        font-weight: $bold;
+        color: $gray;
+    }
+
+    &__position {
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+    }
+
+    &__start-chat {
+        border: none;
+        background: none;
+    }
+
+    &__search {
+        @include flex (row, center, center, nowrap)
+        position: relative;
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 21px;
+        background: $darkwhite;
+        border-top: 1px solid $litegray;
+        border-bottom: 1px solid $litegray;
+    }
+    
+    &__search-box {
+        width: 60%;
+        margin-left: 5%;
+        margin-right: 5%;
+        text-transform: capitalize;
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+        background: $darkwhite;
+        border: none;
+    }
+
+    &__search::after {
+        position: absolute;
+        content: '';
+        bottom: 15%;
+        left: 12%;
+        width: 58%;
+        height: 1px;
+        background: $litegray;
+    }
+
+    &__button {
+        border: none;
+        background: none;
+    }
+}
