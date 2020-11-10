@@ -1018,4 +1018,88 @@ textarea {
   border: none;
   background: none;
 }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer__header {
+  padding-top: 29px;
+  padding-bottom: 29px;
+  font-family: "Lato";
+  font-size: calc(0.5vw + 8px);
+  font-weight: 900;
+  color: #777777;
+}
+
+.footer__social-icons {
+  max-width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__icon {
+  height: 20px;
+  width: 20px;
+  margin: 10%;
+  padding: 20px;
+  border: 0px solid;
+  border-radius: 25%;
+}
+
+.footer__icon--lilac {
+  background: -webkit-gradient(linear, left top, right top, from(#BD83E4), to(#6E5BB7));
+  background: linear-gradient(to right, #BD83E4, #6E5BB7);
+}
+
+.footer__icon--mint {
+  background: -webkit-gradient(linear, left bottom, left top, from(#71EBCD), to(#4CBDC3));
+  background: linear-gradient(to top, #71EBCD, #4CBDC3);
+}
+
+.footer__icon--coral {
+  background: -webkit-gradient(linear, right top, left top, from(#F7C6A8), to(#B4727A));
+  background: linear-gradient(to left, #F7C6A8, #B4727A);
+}
+
+.footer__icon--purple {
+  background: -webkit-gradient(linear, right top, left top, from(#879AE7), to(#844BB6));
+  background: linear-gradient(to left, #879AE7, #844BB6);
+}
+
+.footer__icon--blue {
+  background: -webkit-gradient(linear, left top, right top, from(#5ED7E3), to(#548DE7));
+  background: linear-gradient(to right, #5ED7E3, #548DE7);
+}
+
+.footer__icon--orange {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FBD68A), to(#F59183));
+  background: linear-gradient(to top, #FBD68A, #F59183);
+}
 /*# sourceMappingURL=main.css.map */
