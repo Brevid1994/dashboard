@@ -1,0 +1,199 @@
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    // header  menu
+
+    &__menu {
+        @include flex (row, space-around, center, nowrap)
+    }
+
+    .menu {
+        @include flex (row, space-between, center, nowrap)
+        @include mobile {
+            flex-direction: column;
+        }
+        flex: auto;
+
+        &__buttons {
+            @include flex (row, space-between, center, nowrap)
+        }
+
+        &__list {
+            padding: 25px;
+            border: 1px solid $litegray;
+        }
+
+        &__icon {
+            width: 22px;
+            height: 22px;
+        }
+
+
+        &__form {
+            width: 249px;
+            height: 42px;
+            padding-left: 50px;
+            font-family: $lato;
+            font-size: $small;
+            font-weight: $regular;
+            color: $litegray;
+            background: $darkwhite;
+            border: 1px solid $litegray;
+            border-radius: 20%;
+        }
+    }
+
+    &__account {
+        width: 25%;
+        margin-left: 0.1%;
+        border: 1px solid $litegray;
+    }
+
+    &__avatar {
+        @include flex (row, left , center, nowrap)
+    }
+
+    &__person {
+        @include flex (column, space-around, center, nowrap)
+        margin-left: 18px;
+    }
+
+    &__name {
+        @include gradient
+        margin-bottom: 3%;
+        font-family: $lato;
+        font-size: $medium;
+        font-weight: $bold;
+    }
+
+    &__position {
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+    }
+
+    &__gamburger {
+        position: relative;
+        left: 33%;
+        width: 5px;
+        height: 5px;
+        background: #C1C1C1;
+        border: 1px solid #C1C1C1;
+        border-radius: 50%;
+    }
+
+    &__gamburger::before {
+        position: absolute;
+        top: 10px;
+        left: -1px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background: #C1C1C1;
+        border: 1px solid #C1C1C1;
+        border-radius: 50%;
+    }
+
+    &__gamburger::after {
+        position: absolute;
+        top: -12px;
+        left: -1px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        background: #C1C1C1;
+        border: 1px solid #C1C1C1;
+        border-radius: 50%;
+    }
+
+    // header statistic
+
+    &__statistics {
+        @include flex (row, space-between, center, nowrap)
+        max-width: 95%;
+        flex: auto;
+    }
+
+    .statistic {
+        @include flex (row, space-around, center, nowrap)
+        flex: auto;
+
+        &__container {
+            padding-top: 22px;
+            padding-bottom: 22px;
+            text-align: left;
+        }
+
+        &__list {
+            margin-bottom: 9px;
+        }
+
+        &__header {
+            font-family: $lato;
+            font-size: $medium;
+            font-weight: $normal;
+            color: $gray;
+        }
+
+        &__main {
+            @include gradient
+            font-family: $lato;
+            font-size: $huge;
+            font-weight: $bold;
+        }
+
+        &__result {
+            font-family: $lato;
+            font-size: $small;
+            font-weight: $regular;
+            color: $litegray;
+        }
+
+        &__rise {
+            position: relative;
+            left: 5px;
+        }
+
+        &__fall {
+            position: relative;
+            left: 15%;
+        }
+
+        &__rise::before {
+            position: absolute;
+            left: -5px;
+            top: 50%;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: #A889E9;
+            
+        }
+
+        &__fall::before {
+            position: absolute;
+            content: '';
+            left: -5px;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            background: #FD5670;
+        }
+
+        &__action {
+            border: none;
+        }
+
+        &__button {
+            @include gradient
+            margin-bottom: 3%;
+            font-family: $lato;
+            font-size: $medium;
+            font-weight: $bold;
+            border: none;
+        }
+    }
+}
