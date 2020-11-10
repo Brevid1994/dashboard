@@ -1,0 +1,40 @@
+// text variables
+
+    // font-family
+    $lato: 'Lato';
+
+    // font-size
+$small: calc(0.5vw + 4px);
+$medium: calc(0.5vw + 8px);
+$big: calc(1vw + 5px);
+$huge: calc(.8vw + 10px);
+
+    // font-weight
+$regular: 400;
+$normal: 700;
+$bold: 900;
+
+
+// color variables
+
+    // text color
+$white: #FFFFFF;
+$darkgray: #838383;
+$gray: #777777;
+$litegray: #BFBFBF;
+$darkwhite: #F8F8F8;
+
+    // background color
+$gradient-red: linear-gradient(to top, #EA6D54, #FD5271);
+$gradient-gray: linear-gradient(to left, #FFFFFF, #C5B1B1);
+$gradient-lilac: linear-gradient(to right, #BD83E4, #6E5BB7);
+$gradient-mint: linear-gradient(to top, #71EBCD, #4CBDC3);
+$gradient-coral: linear-gradient(to left, #F7C6A8, #B4727A);
+$gradient-purple: linear-gradient(to left, #879AE7, #844BB6);
+$gradient-blue: linear-gradient(to right, #5ED7E3, #548DE7);
+$gradient-orange: linear-gradient(to top, #FBD68A, #F59183);
+
+// devices
+
+    // mobile
+$mobile: 768px;
