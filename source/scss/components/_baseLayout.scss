@@ -4,4 +4,7 @@
     flex-wrap: wrap;
     width: 94%;
     height: 100%;
+    @include mobile {
+        @include flex (column, space-between, center, wrap)
+    }
 }
