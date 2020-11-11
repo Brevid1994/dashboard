@@ -11,6 +11,7 @@
         @include flex (row, space-around, center, nowrap)
         @include mobile {
             @include flex (row, space-between, center, nowrap)
+            background: $gradient-red;
         }
     }
 
@@ -65,18 +66,32 @@
     &__avatar {
         @include flex (row, left , center, nowrap)
         @include mobile {
-            @include flex (row-reverse, space-around, flex-start, nowrap)
+            @include flex (row-reverse, right, flex-start, nowrap)
             width: 100%;
+        }
+    }
+
+    &__photo {
+        @include mobile {
+            border-radius: 50%;
         }
     }
 
     &__person {
         @include flex (column, space-around, flex-end, nowrap)
         margin-left: 18px;
+        @include mobile {
+            @include flex (column, space-between, flex-start, nowrap)
+            margin-top: 3%;
+        }
     }
 
     &__name {
         @include gradient
+        @include mobile {
+            @include gradient-gray
+            font-size: $huge;
+        }
         margin-bottom: 3%;
         font-family: $lato;
         font-size: $medium;
@@ -88,6 +103,10 @@
         font-size: $small;
         font-weight: $regular;
         color: $litegray;
+        @include mobile {
+            @include gradient-gray
+            font-size: $medium;
+        }
     }
 
     &__gamburger {
@@ -101,6 +120,7 @@
         @include mobile {
             left: 2%;
             top: 22%;
+            border: 1px solid $litegray;
         }
     }
 
@@ -132,21 +152,28 @@
 
     &__statistics {
         @include flex (row, space-between, center, nowrap)
+        max-width: 95%;
+        flex: auto;
         @include mobile {
             overflow: scroll;
         }
-        max-width: 95%;
-        flex: auto;
     }
 
     .statistic {
         @include flex (row, space-around, center, nowrap)
         flex: auto;
 
+
         &__container {
             padding-top: 22px;
             padding-bottom: 22px;
             text-align: left;
+            @include mobile {
+                @include flex (row, start, flex-start, wrap)
+                margin: 3%;
+                padding: 0;
+                text-align: left;
+            }
         }
 
         &__list {
@@ -172,6 +199,9 @@
             font-size: $small;
             font-weight: $regular;
             color: $litegray;
+            @include mobile {
+                display: none;
+            }
         }
 
         &__rise {

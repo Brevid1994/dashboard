@@ -13,6 +13,13 @@
     background-image: $gradient-red;
 }
 
+@mixin gradient-gray{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient-gray;
+}
+
 @mixin mobile {
     @media (max-width: $mobile) {
         @content;
