@@ -9,15 +9,20 @@
         font-size: $medium;
         font-weight: $bold;
         color: $gray;
+        @include mobile {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: $huge;
+        }
     }
 
     &__social-icons {
-        max-width: 60%;
+        width: 60%;
         @include flex (row, space-around, center, wrap)
-    }
-
-    &__link {
-
+        @include mobile {
+            width: 100%;
+            @include flex (row, center, center, nowrap)
+        }
     }
 
     &__icon {
@@ -27,6 +32,12 @@
         padding: 20px;
         border: 0px solid;
         border-radius: 25%;
+        @include mobile {
+            height: 12px;
+            width: 12px;
+            padding: 10px;
+            margin: 4px;
+        }
     }
 
     &__icon--lilac {
