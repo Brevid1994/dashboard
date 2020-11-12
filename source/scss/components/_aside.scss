@@ -1,10 +1,16 @@
 .aside {
     @include flex (column, space-between, center, nowrap)
+    @include mobile {
+        background: $gradient-gray;
+    }
 
     &__navigation {
         width: 100%;
-        background: $gradient-red;
         @include flex (row, space-between, center, nowrap)
+        background: $gradient-red;
+        @include mobile {
+            order: 1;
+        }
     }
 
     &__list {
@@ -12,6 +18,10 @@
         flex: auto; 
         padding-top: 25px;
         padding-bottom: 25px;
+        @include mobile {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
     }
 
     &__list:hover {
@@ -21,6 +31,9 @@
     &__chatbar {
         width: 85%;
         @include flex (column, space-between, left, nowrap)
+        @include mobile {
+            order: 3;
+        }
     }
 
     &__user {
@@ -28,6 +41,9 @@
         padding-top: 20px;
         padding-bottom: 20px;
         @include flex (row, space-between, center, nowrap)
+        @include mobile {
+            padding: 10px;
+        }
     }
 
     &__user::after {
@@ -42,6 +58,9 @@
     &__avatar {
         height: 42px;
         width: 42px;
+        @include mobile {
+            border-radius: 50%;
+        }
     }
 
     &__person {
@@ -70,14 +89,22 @@
     }
 
     &__search {
-        @include flex (row, center, center, nowrap)
         position: relative;
         width: 100%;
+        @include flex (row, center, center, nowrap)
         padding-top: 17px;
         padding-bottom: 21px;
         background: $darkwhite;
         border-top: 1px solid $litegray;
         border-bottom: 1px solid $litegray;
+        @include mobile {
+            order: 2;
+            width: 80%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-top: 1%;
+            border-radius: 30px;
+        }
     }
     
     &__search-box {
@@ -91,6 +118,9 @@
         color: $litegray;
         background: $darkwhite;
         border: none;
+        @include mobile {
+            font-size: $big;
+        }
     }
 
     &__search::after {
