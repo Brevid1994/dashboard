@@ -809,7 +809,9 @@ textarea {
   .header__gamburger {
     left: 2%;
     top: 22%;
-    border: 1px solid #BFBFBF;
+    width: 15px;
+    height: 1px;
+    border-radius: 0%;
   }
 }
 
@@ -825,6 +827,15 @@ textarea {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .header__gamburger::before {
+    top: 6px;
+    width: 15px;
+    height: 1px;
+    border-radius: 0%;
+  }
+}
+
 .header__gamburger::after {
   position: absolute;
   top: -12px;
@@ -835,6 +846,15 @@ textarea {
   background: #C1C1C1;
   border: 1px solid #C1C1C1;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .header__gamburger::after {
+    top: -8px;
+    width: 15px;
+    height: 1px;
+    border-radius: 0%;
+  }
 }
 
 .header__statistics {
@@ -861,7 +881,21 @@ textarea {
 
 @media (max-width: 768px) {
   .header__statistics {
-    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -885,6 +919,12 @@ textarea {
           flex: auto;
 }
 
+@media (max-width: 768px) {
+  .header .statistic {
+    overflow-x: scroll;
+  }
+}
+
 .header .statistic__container {
   padding-top: 22px;
   padding-bottom: 22px;
@@ -893,21 +933,6 @@ textarea {
 
 @media (max-width: 768px) {
   .header .statistic__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     margin: 3%;
     padding: 0;
     text-align: left;
