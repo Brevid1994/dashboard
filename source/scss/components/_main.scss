@@ -4,4 +4,7 @@
     flex: auto;
     flex-direction: row;
     flex-wrap: wrap;
+    @include mobile {
+        width: 100%;
+    }
 }

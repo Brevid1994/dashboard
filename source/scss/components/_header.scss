@@ -2,6 +2,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    @include mobile {
+        width: 100%;
+    }
     
 
     // header  menu
@@ -166,7 +169,7 @@
 
     &__statistics {
         @include flex (row, space-between, center, nowrap)
-        max-width: 95%;
+        width: 95%;
         flex: auto;
         @include mobile {
             @include flex (column, space-between, center, wrap)
