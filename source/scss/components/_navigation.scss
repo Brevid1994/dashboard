@@ -1,12 +1,13 @@
 .navigation {
     @include flex (column, flex-start, left, nowrap)
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    width: 6%;
+    background: $gradient-red;
     @include mobile {
         display: none;
     }
-
-    max-height: 100%;
-    width: 6%;
-    background: $gradient-red;
 
     &__logo {
         width: 100%;

@@ -364,6 +364,7 @@ textarea {
 }
 
 .wrapper {
+  position: relative;
   max-width: 1366px;
   margin: 0 auto;
   display: -webkit-box;
@@ -382,6 +383,8 @@ textarea {
 }
 
 .baseLayout {
+  width: 100%;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,8 +394,6 @@ textarea {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 94%;
-  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -432,7 +433,10 @@ textarea {
           align-items: left;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  max-height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
   width: 6%;
   background: -webkit-gradient(linear, left bottom, left top, from(#EA6D54), to(#FD5271));
   background: linear-gradient(to top, #EA6D54, #FD5271);
@@ -461,8 +465,8 @@ textarea {
 }
 
 .navigation__list:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), to(#C5B1B1));
-  background: linear-gradient(to left, #FFFFFF, #C5B1B1);
+  background: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
+  background: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
 }
 
 .navigation__button {
@@ -784,8 +788,8 @@ textarea {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: -webkit-gradient(linear, right top, left top, from(#FFFFFF), to(#C5B1B1));
-    background-image: linear-gradient(to left, #FFFFFF, #C5B1B1);
+    background-image: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
+    background-image: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
     font-size: calc(10px + .8vw);
   }
 }
@@ -802,8 +806,8 @@ textarea {
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: -webkit-gradient(linear, right top, left top, from(#FFFFFF), to(#C5B1B1));
-    background-image: linear-gradient(to left, #FFFFFF, #C5B1B1);
+    background-image: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
+    background-image: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
     font-size: calc(8px + 0.5vw);
   }
 }
@@ -1095,8 +1099,8 @@ textarea {
 
 @media (max-width: 768px) {
   .aside {
-    background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), to(#C5B1B1));
-    background: linear-gradient(to left, #FFFFFF, #C5B1B1);
+    background: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
+    background: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
   }
 }
 
@@ -1146,8 +1150,8 @@ textarea {
 }
 
 .aside__list:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#FFFFFF), to(#C5B1B1));
-  background: linear-gradient(to left, #FFFFFF, #C5B1B1);
+  background: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
+  background: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
 }
 
 .aside__chatbar {
