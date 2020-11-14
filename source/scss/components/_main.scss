@@ -2,9 +2,107 @@
     width: 72%;
     display: flex;
     flex: auto;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     @include mobile {
         width: 100%;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__box {
+        @include flex (row, space-between, flex-start, nowrap)
+        margin: 2%;
+        height: 100%;
+        flex: auto;
+    }
+
+    &__result {
+        height: 100%;
+    }
+
+    &__subtitle {
+        margin-bottom: 5%;
+        margin-left: 5%;    
+        font-family: $lato;
+        font-size: $medium;
+        font-weight: $normal;
+        color: $gray;
+    }
+
+    &__period {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-left: 20px;
+    }
+
+    &__button {
+        margin: 5%;
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+        text-decoration: none;
+        border: none;
+        background: none;
+    }
+
+    &__button:hover {
+        padding: 5px;
+        border-radius: 20%;
+        background: $gradient-red;
+    }
+
+    &__graph {
+        @include flex (column, flex-start, stretch, nowrap)
+        position: relative;
+    }
+
+    &__axis-y {
+        position: relative;
+
+    }
+
+    &__axis-x {
+        position: relative;
+        @include flex (row, space-between, center, nowrap)
+        margin-left: 15%;
+    }
+
+    &__list {
+        position: relative;
+        margin: 5%;
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+    }
+
+    &__list--y::after {
+        content: '';
+        position: absolute;
+        width: 215%;
+        left: 15%;
+        height: 1px;
+        background: $litegray;
+        top: 100%;
+    }
+
+    &__revenue {
+        @include flex (column, space-between, center, nowrap)
+        width: 30%;
+        height: 100%;
+    }
+
+    &__diagram {
+        width: 80%;
+        background: url(/source/img/main/diagram.png);
+    }
+
+    &__benefit {
     }
 }
