@@ -2,9 +2,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    @include mobile {
-        width: 100%;
-    }
     
 
     // header  menu
@@ -59,7 +56,7 @@
         margin-left: 0.1%;
         border: 1px solid $litegray;
         @include mobile {
-            @include flex (row, flex-end, left, nowrap)            
+            @include flex (row, end, flex-end, nowrap)            
             width: 100%;
             margin: 1%;
             border: none;

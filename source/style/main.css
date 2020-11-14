@@ -427,10 +427,10 @@ textarea {
           flex-direction: column;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: -webkit-sticky;
@@ -542,12 +542,6 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  .header {
-    width: 100%;
-  }
 }
 
 .header__menu {
@@ -675,10 +669,10 @@ textarea {
             flex-direction: row;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
+            justify-content: end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%;
@@ -1101,6 +1095,7 @@ textarea {
   .aside {
     background: -webkit-gradient(linear, right top, left top, from(#C5B1B1), color-stop(#FFFFFF), to(#C5B1B1));
     background: linear-gradient(to left, #C5B1B1, #FFFFFF, #C5B1B1);
+    max-height: 65%;
   }
 }
 
@@ -1166,15 +1161,17 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
   .aside__chatbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;

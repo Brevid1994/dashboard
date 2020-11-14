@@ -2,6 +2,7 @@
     @include flex (column, space-between, center, nowrap)
     @include mobile {
         background: $gradient-gray;
+        max-height: 65%;
     }
 
     &__navigation {
@@ -30,8 +31,10 @@
 
     &__chatbar {
         width: 85%;
-        @include flex (column, space-between, left, nowrap)
+        @include flex (column, space-between, stretch, nowrap)
         @include mobile {
+            overflow-y: scroll;
+            overflow-x: hidden;
             order: 3;
         }
     }
