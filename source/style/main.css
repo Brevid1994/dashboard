@@ -1234,7 +1234,7 @@ textarea {
 .main__diagram {
   width: 80%;
   height: 80%;
-  background: url(./source/img/diagram.png);
+  background: url(../img/diagram.png) center no-repeat;
 }
 
 .main__review-block {
@@ -1381,10 +1381,75 @@ textarea {
 .main__time::before {
   position: absolute;
   content: '';
-  height: 10px;
-  width: 10px;
-  left: -35%;
-  background-image: url(./source/img/main/clock.png);
+  height: 12px;
+  width: 12px;
+  left: -40%;
+  top: 0;
+  background-image: url(../img/main/clock.png);
+}
+
+.main__map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.main__progress {
+  width: 48%;
+  margin-top: 3%;
+  text-align: center;
+}
+
+.main__progress-graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 5% 10%;
+}
+
+.main__progress-list {
+  width: 15px;
+  height: 100px;
+  border-radius: 25%;
+  background: #F6F6F6;
+}
+
+.main__progress-list:nth-child(1n + 1) {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #8C4AB2), to(#FFFFFF));
+  background: linear-gradient(to top, #8C4AB2 25%, #FFFFFF);
+}
+
+.main__progress-list:nth-child(2n + 2) {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8C4AB2), to(#FFFFFF));
+  background: linear-gradient(to top, #8C4AB2 50%, #FFFFFF);
+}
+
+.main__progress-list:nth-child(3n + 3) {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #8C4AB2), to(#FFFFFF));
+  background: linear-gradient(to top, #8C4AB2 75%, #FFFFFF);
+}
+
+.main__shipments {
+  width: 48%;
+  margin-top: 3%;
+  text-align: center;
 }
 
 .sidebar {
