@@ -1058,6 +1058,7 @@ textarea {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background: #ECECEC;
 }
 
 @media (max-width: 768px) {
@@ -1093,19 +1094,21 @@ textarea {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin: 2%;
-  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: auto;
           flex: auto;
 }
 
 .main__result {
-  height: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 3px #838383;
+          box-shadow: 0 0 3px #838383;
 }
 
 .main__subtitle {
-  margin-bottom: 5%;
-  margin-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
   font-family: "Lato";
   font-size: calc(8px + 0.5vw);
   font-weight: 700;
@@ -1138,7 +1141,6 @@ textarea {
 }
 
 .main__button:hover {
-  padding: 5px;
   border-radius: 20%;
   background: -webkit-gradient(linear, left bottom, left top, from(#EA6D54), to(#FD5271));
   background: linear-gradient(to top, #EA6D54, #FD5271);
@@ -1224,11 +1226,165 @@ textarea {
       flex-wrap: nowrap;
   width: 30%;
   height: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 3px #838383;
+          box-shadow: 0 0 3px #838383;
 }
 
 .main__diagram {
   width: 80%;
-  background: url(/source/img/main/diagram.png);
+  height: 80%;
+  background: url(./source/img/diagram.png);
+}
+
+.main__review-block {
+  width: 42%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 3px #838383;
+          box-shadow: 0 0 3px #838383;
+}
+
+.main__reviews {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main__review {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main__review .review__avatar {
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+}
+
+.main__review .review__text {
+  width: 68%;
+  padding: 5px;
+  font-family: "Lato";
+  font-size: calc(4px + 0.5vw);
+  font-weight: 400;
+  color: #BFBFBF;
+  background: #F8F8F8;
+  border: 1px solid #FCFCFC;
+}
+
+.main__review .review__text--main {
+  margin-left: 25px;
+}
+
+.main__review .review__text--alt {
+  position: relative;
+  width: 63%;
+  margin-left: 27%;
+  margin-top: 10px;
+}
+
+.main__review .review__text--alt::before {
+  content: '';
+  position: absolute;
+  left: -3%;
+  top: 0%;
+  width: 3px;
+  height: 100%;
+  background: #BFBFBF;
+}
+
+.main__review .review__person {
+  font-family: "Lato";
+  font-size: calc(4px + 0.5vw);
+  font-weight: 900;
+  color: #777777;
+}
+
+.main__possibilities {
+  width: 56%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 3px #838383;
+          box-shadow: 0 0 3px #838383;
+}
+
+.main__today-block {
+  overflow-y: scroll;
+}
+
+.main__tasks {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 95%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.main__tasks:nth-child(2n + 1) {
+  background: #FCFCFC;
+}
+
+.main__tasks::after {
+  position: absolute;
+  content: '';
+  top: 5%;
+  height: 1px;
+  width: 90%;
+  background: #BFBFBF;
+}
+
+.main__task {
+  font-family: "Lato";
+  font-size: calc(8px + 0.5vw);
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#EA6D54), to(#FD5271));
+  background-image: linear-gradient(to top, #EA6D54, #FD5271);
+}
+
+.main__description {
+  font-family: "Lato";
+  font-size: calc(4px + 0.5vw);
+  font-weight: 400;
+  color: #BFBFBF;
+}
+
+.main__time {
+  position: relative;
+  font-family: "Lato";
+  font-size: calc(4px + 0.5vw);
+  font-weight: 900;
+  color: #838383;
+}
+
+.main__time::before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  left: -35%;
+  background-image: url(./source/img/main/clock.png);
 }
 
 .sidebar {

@@ -4,6 +4,7 @@
     flex: auto;
     flex-direction: column;
     flex-wrap: wrap;
+    background: #ECECEC;
     @include mobile {
         width: 100%;
     }
@@ -13,20 +14,25 @@
         flex-direction: column;
     }
 
+    // first box
+
     &__box {
         @include flex (row, space-between, flex-start, nowrap)
         margin: 2%;
-        height: 100%;
         flex: auto;
     }
 
+    // shedule
+
     &__result {
-        height: 100%;
+        background: $white;
+        box-shadow: 0 0 3px $darkgray;
     }
 
     &__subtitle {
-        margin-bottom: 5%;
-        margin-left: 5%;    
+        padding-bottom: 5%;
+        padding-top: 5%;
+        padding-left: 5%;    
         font-family: $lato;
         font-size: $medium;
         font-weight: $normal;
@@ -52,7 +58,6 @@
     }
 
     &__button:hover {
-        padding: 5px;
         border-radius: 20%;
         background: $gradient-red;
     }
@@ -64,7 +69,6 @@
 
     &__axis-y {
         position: relative;
-
     }
 
     &__axis-x {
@@ -92,17 +96,159 @@
         top: 100%;
     }
 
+    // diagram
+
     &__revenue {
         @include flex (column, space-between, center, nowrap)
         width: 30%;
         height: 100%;
+        background: $white;
+        box-shadow: 0 0 3px $darkgray;
     }
 
     &__diagram {
         width: 80%;
-        background: url(/source/img/main/diagram.png);
+        height: 80%;
+        background: url(./source/img/diagram.png);
     }
 
     &__benefit {
+    }
+
+    // second box
+
+    // reviews
+
+    &__review-block {
+        width: 42%;
+        background: $white;
+        box-shadow: 0 0 3px $darkgray;
+    }
+
+    &__reviews {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__review {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .review {
+
+            &__avatar {
+                width: 50px;
+                height: 50px;
+                margin-left: 5px;
+            }
+
+            &__text {
+                width: 68%;
+                padding: 5px;
+                font-family: $lato;
+                font-size: $small;
+                font-weight: $regular;
+                color: $litegray;
+                background: $darkwhite;
+                border: 1px solid $whitegray;
+            }
+
+            &__text--main {
+                margin-left: 25px;
+            }
+
+            &__text--alt {
+                position: relative;
+                width: 63%;
+                margin-left: 27%;
+                margin-top: 10px;
+            }
+
+            &__text--alt::before {
+                content: '';
+                position: absolute;
+                left: -3%;
+                top: 0%;
+                width: 3px;
+                height: 100%;
+                background: $litegray;
+
+            }
+
+            &__person {
+                font-family: $lato;
+                font-size: $small;
+                font-weight: $bold;
+                color: $gray;
+            }
+        }
+    }
+
+    &__possibilities {
+        width: 56%;
+        background: $white;
+        box-shadow: 0 0 3px $darkgray;
+    }
+
+    &__today-block {
+        overflow-y: scroll;
+    }
+
+    &__tasks {
+        position: relative;
+        @include flex (row, space-around, center, nowrap)
+        width: 95%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+
+        &:nth-child(2n + 1) {
+            background: $whitegray;
+        }
+    }
+
+    &__tasks::after {
+        position: absolute;
+        content: '';
+        top: 5%;
+        height: 1px;
+        width: 90%;
+        background: $litegray;
+    }
+
+    &__checkbox {
+
+    }
+
+    &__task {
+        font-family: $lato;
+        font-size: $medium;
+        font-weight: $bold;
+        @include gradient
+    }
+
+    &__description {
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
+    }
+
+    &__time {
+        position: relative;
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $bold;
+        color: $darkgray;
+    }
+
+    &__time::before {
+        position: absolute;
+        content: '';
+        height: 10px;
+        width: 10px;
+        left: -35%;
+        background-image: url(./source/img/main/clock.png);
     }
 }
