@@ -235,9 +235,11 @@
             left: -5px;
             top: 50%;
             content: '';
-            width: 4px;
-            height: 4px;
-            background: #A889E9;
+            width: 0;
+            height: 0;
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-bottom: 4px solid #A889E9;
             
         }
 
@@ -246,9 +248,11 @@
             content: '';
             left: -5px;
             top: 50%;
-            width: 4px;
-            height: 4px;
-            background: #FD5670;
+            width: 0;
+            height: 0;
+            border-left: 2px solid transparent;
+            border-right: 2px solid transparent;
+            border-top: 4px solid #FD5670;
         }
 
         &__action {

@@ -112,8 +112,39 @@
         background: url(../img/diagram.png) center no-repeat;
     }
 
-    &__benefit {
+    &__promotion {
+        position: relative;
+        font-family: $lato;
+        font-size: $small;
+        font-weight: $regular;
+        color: $litegray;
     }
+
+    &__promotion--rise::before {
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 4px solid #A889E9;
+    }
+
+    &__promotion--fall::after {
+        position: absolute;
+        content: '';
+        left: -5px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 4px solid #FD5670;
+    }
+
+    
 
     // second box
 
@@ -293,6 +324,14 @@
         &:nth-child(3n + 3) {
             background: $gradient-75;
         }
+    }
+
+    &__profit {
+        font-family: $lato;
+        font-size: $big;
+        font-weight: $bold;
+        @include gradient-violet
+
     }
 
     // shipments

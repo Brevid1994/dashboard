@@ -20,6 +20,13 @@
     background-image: $gradient-gray;
 }
 
+@mixin gradient-violet{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: $gradient-violet;
+}
+
 @mixin mobile {
     @media (max-width: $mobile) {
         @content;

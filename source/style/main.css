@@ -1012,9 +1012,11 @@ textarea {
   left: -5px;
   top: 50%;
   content: '';
-  width: 4px;
-  height: 4px;
-  background: #A889E9;
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid #A889E9;
 }
 
 .header .statistic__fall::before {
@@ -1022,9 +1024,11 @@ textarea {
   content: '';
   left: -5px;
   top: 50%;
-  width: 4px;
-  height: 4px;
-  background: #FD5670;
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 4px solid #FD5670;
 }
 
 .header .statistic__action {
@@ -1237,6 +1241,38 @@ textarea {
   background: url(../img/diagram.png) center no-repeat;
 }
 
+.main__promotion {
+  position: relative;
+  font-family: "Lato";
+  font-size: calc(4px + 0.5vw);
+  font-weight: 400;
+  color: #BFBFBF;
+}
+
+.main__promotion--rise::before {
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 4px solid #A889E9;
+}
+
+.main__promotion--fall::after {
+  position: absolute;
+  content: '';
+  left: -5px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 4px solid #FD5670;
+}
+
 .main__review-block {
   width: 42%;
   background: #FFFFFF;
@@ -1432,18 +1468,29 @@ textarea {
 }
 
 .main__progress-list:nth-child(1n + 1) {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(25%, #8C4AB2), to(#FFFFFF));
-  background: linear-gradient(to top, #8C4AB2 25%, #FFFFFF);
+  background: -webkit-gradient(linear, left bottom, left top, from(#708AE6), color-stop(#8841AF), color-stop(50%, #F6F6F6));
+  background: linear-gradient(to top, #708AE6, #8841AF, #F6F6F6 50%);
 }
 
 .main__progress-list:nth-child(2n + 2) {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #8C4AB2), to(#FFFFFF));
-  background: linear-gradient(to top, #8C4AB2 50%, #FFFFFF);
+  background: -webkit-gradient(linear, left bottom, left top, from(#708AE6), color-stop(#8841AF), color-stop(26%, #F6F6F6));
+  background: linear-gradient(to top, #708AE6, #8841AF, #F6F6F6 26%);
 }
 
 .main__progress-list:nth-child(3n + 3) {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(75%, #8C4AB2), to(#FFFFFF));
-  background: linear-gradient(to top, #8C4AB2 75%, #FFFFFF);
+  background: -webkit-gradient(linear, left bottom, left top, from(#708AE6), color-stop(#8841AF), color-stop(75%, #F6F6F6));
+  background: linear-gradient(to top, #708AE6, #8841AF, #F6F6F6 75%);
+}
+
+.main__profit {
+  font-family: "Lato";
+  font-size: calc(5px + 1vw);
+  font-weight: 900;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left top, right top, from(#708AE6), to(#8841AF));
+  background-image: linear-gradient(to right, #708AE6, #8841AF);
 }
 
 .main__shipments {
