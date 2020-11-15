@@ -24,7 +24,7 @@
         margin: 2%;
         flex: auto;
         @include mobile {
-            @include flex (row, center, center, wrap)
+            @include flex (row, start, center, wrap)
             padding-bottom: 35%;
         }
     }
@@ -38,7 +38,8 @@
         box-shadow: 0 0 3px $darkgray;
         @include mobile {
             margin-top: 5%;
-            width: 100%;
+            padding-right: 20%;
+            max-width: 100%;
             order: 2;
         }
     }
@@ -118,10 +119,10 @@
         box-shadow: 0 0 3px $darkgray;
         @include mobile {
             order: 1;
-            width: 90%;
+            max-width: 90%;
             margin-top: 3%;
             padding-left: 20%;
-            padding-right: 20%;
+            padding-right: 35%;
 
         }
     }
@@ -187,7 +188,7 @@
         background: $white;
         box-shadow: 0 0 3px $darkgray;
         @include mobile {
-            width: 100%;
+            width: 90%;
             margin-top: 20px;
             padding-bottom: 0;
             margin-bottom: -30%;
@@ -270,6 +271,7 @@
     &__today-block {
         overflow-y: scroll;
         @include mobile {
+            max-width: 100%;
             display: flex;
             align-items: center;
             overflow: scroll;
@@ -359,7 +361,9 @@
         flex-direction: row;
         flex-wrap: nowrap;
         @include mobile {
+            max-width: 100%;
             flex-direction: column;
+            align-items: center;
             flex-wrap: wrap;
         }
     }
@@ -371,7 +375,7 @@
         margin-top: 3%;
         text-align: center;
         @include mobile {
-            width: 100%;
+            max-width: 100%;
         }
     }
 
@@ -416,7 +420,7 @@
         text-align: center;
         background: url(../img/main/map.png) center no-repeat;
         @include mobile {
-            width: 100%;
+            max-width: 100%;
         }
     }
 

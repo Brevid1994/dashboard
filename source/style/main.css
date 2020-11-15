@@ -1119,9 +1119,9 @@ textarea {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1142,7 +1142,8 @@ textarea {
 @media (max-width: 768px) {
   .main__result {
     margin-top: 5%;
-    width: 100%;
+    padding-right: 20%;
+    max-width: 100%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -1277,10 +1278,10 @@ textarea {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    width: 90%;
+    max-width: 90%;
     margin-top: 3%;
     padding-left: 20%;
-    padding-right: 20%;
+    padding-right: 35%;
   }
 }
 
@@ -1346,7 +1347,7 @@ textarea {
 
 @media (max-width: 768px) {
   .main__review-block {
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
     padding-bottom: 0;
     margin-bottom: -30%;
@@ -1438,6 +1439,7 @@ textarea {
 
 @media (max-width: 768px) {
   .main__today-block {
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1576,10 +1578,14 @@ textarea {
 
 @media (max-width: 768px) {
   .main__map {
+    max-width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -1593,7 +1599,7 @@ textarea {
 
 @media (max-width: 768px) {
   .main__progress {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -1658,7 +1664,7 @@ textarea {
 
 @media (max-width: 768px) {
   .main__shipments {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
