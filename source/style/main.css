@@ -1033,6 +1033,7 @@ textarea {
 
 .header .statistic__action {
   border: none;
+  margin-top: 25%;
 }
 
 .header .statistic__button {
