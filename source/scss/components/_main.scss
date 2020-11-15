@@ -12,25 +12,38 @@
     &__container {
         display: flex;
         flex-direction: column;
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 
     // first box
 
     &__box {
-        @include flex (row, space-between, flex-start, nowrap)
+        @include flex (row, space-around, flex-start, nowrap)
         margin: 2%;
         flex: auto;
+        @include mobile {
+            @include flex (row, center, center, wrap)
+            padding-bottom: 35%;
+        }
     }
 
     // shedule
 
     &__result {
+        position: relative;
+        width: 65%;
         background: $white;
         box-shadow: 0 0 3px $darkgray;
+        @include mobile {
+            margin-top: 5%;
+            width: 100%;
+            order: 2;
+        }
     }
 
     &__subtitle {
-        padding-bottom: 5%;
         padding-top: 5%;
         padding-left: 5%;    
         font-family: $lato;
@@ -43,11 +56,10 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        margin-left: 20px;
     }
 
     &__button {
-        margin: 5%;
+        margin: 2%;
         font-family: $lato;
         font-size: $small;
         font-weight: $regular;
@@ -73,13 +85,13 @@
 
     &__axis-x {
         position: relative;
-        @include flex (row, space-between, center, nowrap)
-        margin-left: 15%;
+        @include flex (row, space-around, center, nowrap)
+        margin-left: 1%;
     }
 
     &__list {
         position: relative;
-        margin: 5%;
+        margin: 5px;
         font-family: $lato;
         font-size: $small;
         font-weight: $regular;
@@ -89,8 +101,8 @@
     &__list--y::after {
         content: '';
         position: absolute;
-        width: 215%;
-        left: 15%;
+        width: 90%;
+        left: 7%;
         height: 1px;
         background: $litegray;
         top: 100%;
@@ -104,12 +116,30 @@
         height: 100%;
         background: $white;
         box-shadow: 0 0 3px $darkgray;
+        @include mobile {
+            order: 1;
+            width: 90%;
+            margin-top: 3%;
+            padding-left: 20%;
+            padding-right: 20%;
+
+        }
     }
 
     &__diagram {
         width: 80%;
         height: 80%;
         background: url(../img/diagram.png) center no-repeat;
+        @include mobile {
+            padding-top: 3%;
+            padding-bottom: 3%;
+            width: 100%;
+            height: 85%;
+        }
+    }
+
+    &__difference {
+        margin: 5%;
     }
 
     &__promotion {
@@ -135,7 +165,7 @@
     &__promotion--fall::after {
         position: absolute;
         content: '';
-        left: -5px;
+        left: -3px;
         top: 50%;
         width: 0;
         height: 0;
@@ -152,8 +182,17 @@
 
     &__review-block {
         width: 42%;
+        margin-right: 2%;
+        padding-bottom: 19px;
         background: $white;
         box-shadow: 0 0 3px $darkgray;
+        @include mobile {
+            width: 100%;
+            margin-top: 20px;
+            padding-bottom: 0;
+            margin-bottom: -30%;
+            order: 2;
+        }
     }
 
     &__reviews {
@@ -221,23 +260,38 @@
         width: 56%;
         background: $white;
         box-shadow: 0 0 3px $darkgray;
+        @include mobile {
+            width: 100%;
+        }
     }
 
     // to do
 
     &__today-block {
         overflow-y: scroll;
+        @include mobile {
+            display: flex;
+            align-items: center;
+            overflow: scroll;
+        }
     }
 
     &__tasks {
         position: relative;
         @include flex (row, space-around, center, nowrap)
-        width: 95%;
+        max-width: 95%;
         padding-top: 3%;
         padding-bottom: 3%;
 
         &:nth-child(2n + 1) {
             background: $whitegray;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 75%;
+            margin-left: 20px;
         }
     }
 
@@ -248,10 +302,9 @@
         height: 1px;
         width: 90%;
         background: $litegray;
-    }
-
-    &__checkbox {
-
+        @include mobile {
+            display: none;
+        }
     }
 
     &__task {
@@ -259,6 +312,9 @@
         font-size: $medium;
         font-weight: $bold;
         @include gradient
+        @include mobile {
+            margin: 15px;
+        }
     }
 
     &__description {
@@ -266,6 +322,9 @@
         font-size: $small;
         font-weight: $regular;
         color: $litegray;
+        @include mobile {
+            text-align: center;
+        }
     }
 
     &__time {
@@ -274,6 +333,9 @@
         font-size: $small;
         font-weight: $bold;
         color: $darkgray;
+        @include mobile {
+            margin-top: 15px;
+        }
     }
 
     &__time::before {
@@ -284,6 +346,10 @@
         left: -40%;
         top: 0;
         background-image: url(../img/main/clock.png);
+        @include mobile {
+            left: -80%;
+            top: -10%;
+        }
     }
 
     // map
@@ -292,6 +358,10 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        @include mobile {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
     }
 
     // progress
@@ -300,6 +370,9 @@
         width: 48%;
         margin-top: 3%;
         text-align: center;
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__progress-graph {
@@ -337,8 +410,68 @@
     // shipments
 
     &__shipments {
+        position: relative;
         width: 48%;
         margin-top: 3%;
         text-align: center;
+        background: url(../img/main/map.png) center no-repeat;
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &__difference--inline {
+        @include flex (row, space-between, center, nowrap)
+        margin-top: 55%;
+        @include mobile {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__profit--red {
+        @include gradient
+    }
+
+    &__mark--1 {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+    }
+
+    &__mark--2 {
+        position: absolute;
+        top: 25%;
+        left: 25%;
+    }
+
+    &__mark--3 {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
+
+    &__mark--4 {
+        position: absolute;
+        top: 54%;
+        left: 66%;
+    }
+
+    &__mark--5 {
+        position: absolute;
+        top: 34%;
+        left: 33%;
+    }
+
+    &__mark--6 {
+        position: absolute;
+        top: 64%;
+        left: 52%;
+    }
+
+    &__mark--7 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
     }
 }

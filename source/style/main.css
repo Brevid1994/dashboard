@@ -1081,6 +1081,13 @@ textarea {
           flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .main__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .main__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1089,9 +1096,8 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1103,14 +1109,46 @@ textarea {
           flex: auto;
 }
 
+@media (max-width: 768px) {
+  .main__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 35%;
+  }
+}
+
 .main__result {
+  position: relative;
+  width: 65%;
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 3px #838383;
           box-shadow: 0 0 3px #838383;
 }
 
+@media (max-width: 768px) {
+  .main__result {
+    margin-top: 5%;
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .main__subtitle {
-  padding-bottom: 5%;
   padding-top: 5%;
   padding-left: 5%;
   font-family: "Lato";
@@ -1130,11 +1168,10 @@ textarea {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-left: 20px;
 }
 
 .main__button {
-  margin: 5%;
+  margin: 2%;
   font-family: "Lato";
   font-size: calc(4px + 0.5vw);
   font-weight: 400;
@@ -1182,20 +1219,19 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin-left: 15%;
+  margin-left: 1%;
 }
 
 .main__list {
   position: relative;
-  margin: 5%;
+  margin: 5px;
   font-family: "Lato";
   font-size: calc(4px + 0.5vw);
   font-weight: 400;
@@ -1205,8 +1241,8 @@ textarea {
 .main__list--y::after {
   content: '';
   position: absolute;
-  width: 215%;
-  left: 15%;
+  width: 90%;
+  left: 7%;
   height: 1px;
   background: #BFBFBF;
   top: 100%;
@@ -1235,10 +1271,35 @@ textarea {
           box-shadow: 0 0 3px #838383;
 }
 
+@media (max-width: 768px) {
+  .main__revenue {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 90%;
+    margin-top: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
 .main__diagram {
   width: 80%;
   height: 80%;
   background: url(../img/diagram.png) center no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__diagram {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    width: 100%;
+    height: 85%;
+  }
+}
+
+.main__difference {
+  margin: 5%;
 }
 
 .main__promotion {
@@ -1264,7 +1325,7 @@ textarea {
 .main__promotion--fall::after {
   position: absolute;
   content: '';
-  left: -5px;
+  left: -3px;
   top: 50%;
   width: 0;
   height: 0;
@@ -1275,9 +1336,23 @@ textarea {
 
 .main__review-block {
   width: 42%;
+  margin-right: 2%;
+  padding-bottom: 19px;
   background: #FFFFFF;
   -webkit-box-shadow: 0 0 3px #838383;
           box-shadow: 0 0 3px #838383;
+}
+
+@media (max-width: 768px) {
+  .main__review-block {
+    width: 100%;
+    margin-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: -30%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .main__reviews {
@@ -1350,8 +1425,26 @@ textarea {
           box-shadow: 0 0 3px #838383;
 }
 
+@media (max-width: 768px) {
+  .main__possibilities {
+    width: 100%;
+  }
+}
+
 .main__today-block {
   overflow-y: scroll;
+}
+
+@media (max-width: 768px) {
+  .main__today-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: scroll;
+  }
 }
 
 .main__tasks {
@@ -1370,13 +1463,26 @@ textarea {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 95%;
+  max-width: 95%;
   padding-top: 3%;
   padding-bottom: 3%;
 }
 
 .main__tasks:nth-child(2n + 1) {
   background: #FCFCFC;
+}
+
+@media (max-width: 768px) {
+  .main__tasks {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 75%;
+    margin-left: 20px;
+  }
 }
 
 .main__tasks::after {
@@ -1386,6 +1492,12 @@ textarea {
   height: 1px;
   width: 90%;
   background: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .main__tasks::after {
+    display: none;
+  }
 }
 
 .main__task {
@@ -1399,11 +1511,23 @@ textarea {
   background-image: linear-gradient(to top, #EA6D54, #FD5271);
 }
 
+@media (max-width: 768px) {
+  .main__task {
+    margin: 15px;
+  }
+}
+
 .main__description {
   font-family: "Lato";
   font-size: calc(4px + 0.5vw);
   font-weight: 400;
   color: #BFBFBF;
+}
+
+@media (max-width: 768px) {
+  .main__description {
+    text-align: center;
+  }
 }
 
 .main__time {
@@ -1414,6 +1538,12 @@ textarea {
   color: #838383;
 }
 
+@media (max-width: 768px) {
+  .main__time {
+    margin-top: 15px;
+  }
+}
+
 .main__time::before {
   position: absolute;
   content: '';
@@ -1422,6 +1552,13 @@ textarea {
   left: -40%;
   top: 0;
   background-image: url(../img/main/clock.png);
+}
+
+@media (max-width: 768px) {
+  .main__time::before {
+    left: -80%;
+    top: -10%;
+  }
 }
 
 .main__map {
@@ -1436,10 +1573,27 @@ textarea {
       flex-wrap: nowrap;
 }
 
+@media (max-width: 768px) {
+  .main__map {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .main__progress {
   width: 48%;
   margin-top: 3%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main__progress {
+    width: 100%;
+  }
 }
 
 .main__progress-graph {
@@ -1494,9 +1648,98 @@ textarea {
 }
 
 .main__shipments {
+  position: relative;
   width: 48%;
   margin-top: 3%;
   text-align: center;
+  background: url(../img/main/map.png) center no-repeat;
+}
+
+@media (max-width: 768px) {
+  .main__shipments {
+    width: 100%;
+  }
+}
+
+.main__difference--inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-top: 55%;
+}
+
+@media (max-width: 768px) {
+  .main__difference--inline {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.main__profit--red {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#EA6D54), to(#FD5271));
+  background-image: linear-gradient(to top, #EA6D54, #FD5271);
+}
+
+.main__mark--1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+.main__mark--2 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.main__mark--3 {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.main__mark--4 {
+  position: absolute;
+  top: 54%;
+  left: 66%;
+}
+
+.main__mark--5 {
+  position: absolute;
+  top: 34%;
+  left: 33%;
+}
+
+.main__mark--6 {
+  position: absolute;
+  top: 64%;
+  left: 52%;
+}
+
+.main__mark--7 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
 }
 
 .sidebar {
